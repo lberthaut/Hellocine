@@ -1,0 +1,43 @@
+.formnewuser{
+    border-radius: 5px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+    width: 30%;
+    padding: 2% 5% 2% 5%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+    background-color: rgb(46, 46, 46);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.register_button {
+    margin: 0 auto;
+    width: 80%;
+    border: none;
+  background:rgb(167, 0, 0);;
+  color: #fff;
+  padding: 4% 15% 3% 20%;  
+  overflow:hidden;
+  font-size: 1.1vw;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease; 
+} 
+
+.register_button:before {
+    font-family: FontAwesome;
+    content:"\f008";
+    font-weight: 900;
+    position: absolute;
+    top: 11px;
+    left: -30px;
+    transition: all 300ms ease;
+  }
+
+  .register_button:hover:before {
+    left: 25px;
+  }

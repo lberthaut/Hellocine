@@ -1,0 +1,36 @@
+.videos_container {
+  border-radius: 5px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1%;
+  text-align: center;
+}
+
+.videos_title {
+  font-size: 3vw;
+  margin: 0;
+  padding-left: 2%;
+}
+
+.videos_block {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video_container {
+  margin: 2%;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 35%;
+  height: 30vh;
+}
+
+.video_container > object {
+  height: 100%;
+  width: 100%;
+}

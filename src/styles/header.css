@@ -1,0 +1,47 @@
+.logo {
+  width: 72px;
+}
+
+.logo_link {
+  margin-left: 5%;
+}
+
+.navbar {
+  padding: 0;
+  border-bottom: solid black 1px;
+  box-shadow: 0px 7px 4px -6px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.container-fluid {
+  background-color: rgb(167, 0, 0);
+  padding-left: 2%;
+}
+
+.pages_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+  padding-right: 10%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: black;
+}
+
+.login_link{
+  width: 10%;
+}
+
+.header_block{
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2%;
+}

@@ -1,0 +1,51 @@
+.movie_details_block {
+  border-radius: 5px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.moviedetails_poster_container {
+  margin: 2% 2% 2% 2%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.moviedetails_text_container {
+  margin: 2% 2% 2% 2%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.moviedetails_title,
+.moviedetails_tagline {
+  text-align: center;
+}
+
+.moviedetails_tagline {
+  font-size: 1.5vw;
+}
+
+.moviedetails_overview_title {
+  font-size: 1.2vw;
+}
+
+.moviedetails_overview {
+  text-align: justify;
+}
+
+.moviedetails_date_title,
+.moviedetails_budget_title {
+  font-size: 1.2vw;
+}
+
+.moviedetails_budget, .moviedetails_releasedate, .moviedetails_overview{
+  margin: 0;
+}

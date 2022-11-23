@@ -1,0 +1,17 @@
+.dropdown_button{
+    background-color: rgb(167, 0, 0);
+    border: none;
+    height: 40%;
+}
+
+.dropdown_button:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+.dropdown_ul{
+    background-color: rgb(46, 46, 46);
+}
+
+.dropdown_link{
+    color: white;
+}

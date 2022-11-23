@@ -1,0 +1,16 @@
+.head_container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 1%;
+    text-align: center;
+    border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  padding: 0.5% 5% 0.5% 5%;
+}
+
+.head_container>div>p{
+    font-size: 0.9vw;
+    margin: 0;
+}
