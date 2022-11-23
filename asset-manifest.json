@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hellocine/static/css/main.c9fddcf1.css",
+    "main.js": "/hellocine/static/js/main.90eb516b.js",
+    "static/js/787.1fee1fb8.chunk.js": "/hellocine/static/js/787.1fee1fb8.chunk.js",
+    "index.html": "/hellocine/index.html",
+    "main.c9fddcf1.css.map": "/hellocine/static/css/main.c9fddcf1.css.map",
+    "main.90eb516b.js.map": "/hellocine/static/js/main.90eb516b.js.map",
+    "787.1fee1fb8.chunk.js.map": "/hellocine/static/js/787.1fee1fb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9fddcf1.css",
+    "static/js/main.90eb516b.js"
+  ]
+}
