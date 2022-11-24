@@ -30,7 +30,7 @@ export default function Router() {
         <Header />
         <Routes>
           //PUBLIC ROUTES
-          <Route path="/" element={<Home />} />
+          <Route path="/Hellocine" element={<Home />} />
           <Route path="/movie/:id" element={<Moviedetails />} />
           <Route path="/genre/:name-:id" element={<Listbygenre />} />
           <Route path="/login" element={<Loginform />} />
