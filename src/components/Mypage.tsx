@@ -56,7 +56,7 @@ export default function Mypage() {
         <h2>Code Postal</h2>
         <p>{userDatas.postalCode}</p>
         <button className="updateprofile_button" onClick={Handleupdate}>
-          Mettre à jour le profil
+          Mettre à jour
         </button>
         <button className="addmovie_button" onClick={Handleaddmovie}>
           Ajouter un film

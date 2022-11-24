@@ -5,33 +5,30 @@ export default function Activeusers() {
     Math.floor(Math.random() * 7420658)
   );
   const range = 6000;
-  let randomnumber = Math.floor(Math.random() * range);
-  const formatpublicnumber = new Intl.NumberFormat("de-DE").format(publicUser);
 
   function Increasepublic() {
     setInterval(() => {
+      let randomnumber = Math.floor(Math.random() * range);
       setPublicUser(publicUser + randomnumber);
     }, 6000);
   }
 
   function Decreasepublic() {
     setInterval(() => {
+      let randomnumber = Math.floor(Math.random() * range);
       setPublicUser(publicUser - randomnumber);
-    }, 6000);
+    }, 3000);
   }
 
   useEffect(() => {
     Increasepublic();
-  });
-
-  useEffect(() => {
-    setTimeout(Decreasepublic, 3000);
+    Decreasepublic();
   }, []);
 
   return (
     <div className="user_block">
       <p>Utilistaeurs sur le site:</p>
-      <p>{formatpublicnumber} utilisateurs</p>
+      <p>{new Intl.NumberFormat("de-DE").format(publicUser)} utilisateurs</p>
     </div>
   );
 }
