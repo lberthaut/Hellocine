@@ -24,23 +24,28 @@ export default function Updateprofile() {
     avatar: "",
     birthday: "",
   });
-  const tokenvalue: string | null = sessionStorage.getItem("token");
   const navigate = useNavigate();
+  // const tokenvalue: string | null = sessionStorage.getItem("token");
 
-  function Updateaxios() {
-    axios
-      .put("https://api-ri7.herokuapp.com/api/users/profile", userDatas, {
-        headers: {
-          Authorization: `Bearer ${tokenvalue}`,
-        },
-      })
-      .then((resp) => console.log("response", resp))
-      .catch((err) => console.log("error", err));
+  // function Updateaxios() {
+  //   axios
+  //     .put("https://api-ri7.herokuapp.com/api/users/profile", userDatas, {
+  //       headers: {
+  //         Authorization: `Bearer ${tokenvalue}`,
+  //       },
+  //     })
+  //     .then((resp) => console.log("response", resp))
+  //     .catch((err) => console.log("error", err));
+  // }
+
+  function Setstorage() {
+    localStorage.setItem("userdatas", JSON.stringify(userDatas));
   }
 
   function Handlesubmit(e: React.FormEvent) {
     e.preventDefault();
-    Updateaxios();
+    // Updateaxios();
+    Setstorage();
     navigate("/mypage");
   }
 

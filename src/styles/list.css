@@ -42,7 +42,8 @@
 .movie_title {
   margin: 0;
   font-size: 1vw;
-  width: 60%;
+  width: 80%;
+  padding-top: 1%
 }
 
 .movie_poster_container {

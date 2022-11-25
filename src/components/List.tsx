@@ -2,9 +2,8 @@ import "../styles/list.css";
 import { Imovie } from "../components/Home";
 import { Idatas } from "../components/Home";
 import { NavLink } from "react-router-dom";
-import { useContext, useEffect } from "react";
-import { MyContext } from "../app/store/Appcontext";
-import { Icontext } from "../app/store/Appcontext";
+import { useContext } from "react";
+import { Icontext, MyContext } from "../app/store/Appcontext";
 
 interface Idataprops {
   titlecontainer: string;
@@ -12,24 +11,22 @@ interface Idataprops {
 }
 
 export default function List(props: Idataprops) {
-  // const { store } = useContext(MyContext) as Icontext;
+  const { searchValue, setSearchValue } = useContext(MyContext) as Icontext;
 
-  // useEffect(() => {
-  //   store.theme == "light"
-  //     ? (document.body.style.backgroundImage =
-  //         'url("https://w.wallhaven.cc/full/4l/wallhaven-4lyl6q.jpg")')
-  //     : null;
-  // }, []);
-
+  function Handlereset() {
+    setSearchValue("");
+  }
   return (
     <>
       <div className="movies_container">
         <p className="title_list">{props.titlecontainer}</p>
         <div className="movies_list_container">
-          {props?.datas?.results.map((movie: Imovie) => (
+          {props?.datas?.results.map((movie: Imovie, index) => (
             <NavLink
+              key={index}
               className="movie_container_link link"
               to={`/movie/${movie.id}`}
+              onClick={Handlereset}
             >
               <div className="movie_poster_container">
                 <img

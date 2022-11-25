@@ -1,0 +1,18 @@
+.searchbar_block{
+    width: 40%;
+    padding-left: 5vw;
+
+}
+
+.searchbar{
+    margin-top: 6%;
+    border-radius: 7px;
+    width: 55%;
+    border: none;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+    padding: 1%;
+}
+
+.searchbar:focus{
+    outline: none;
+}

@@ -16,12 +16,7 @@ import Usetoken from "../../app/Utils/Usetoken";
 import Loginform from "../Loginform";
 import Appcontext from "../../app/store/Appcontext";
 import Listbygenre from "../categories/Listbygenre";
-
-// const AuthRoutes = () => {
-//   const hasToken = Usetoken();
-
-//   return hasToken ? <Outlet /> : <Navigate to={"/login"} />;
-// };
+import Searchedmovies from "../categories/searchedmovies";
 
 export default function Router() {
   return (
@@ -35,6 +30,7 @@ export default function Router() {
           <Route path="/genre/:name-:id" element={<Listbygenre />} />
           <Route path="/login" element={<Loginform />} />
           <Route path="/newuser" element={<Newuserform />} />
+          <Route path="/search" element={<Searchedmovies />} />
           //PRIVATE ROUTES
           {/* <Route element={<AuthRoutes />}> */}
           <Route path="/mypage" element={<Mypage />} />

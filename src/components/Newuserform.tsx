@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/newuser.css";
+import { Icontext, MyContext } from "../app/store/Appcontext";
 
 export interface Inewuser {
   email: string;
@@ -15,23 +16,18 @@ export interface Inewuser {
 }
 
 export default function Newuserform() {
-  const [userDatas, setUserDatas] = useState<Inewuser>({
-    email: "",
-    password: "",
-    firstname: "",
-    lastname: "",
-    city: "",
-    postalCode: "",
-    avatar: "",
-    birthday: "",
-  });
+  const { userDatas, setUserDatas } = useContext(MyContext) as Icontext;
   const navigate = useNavigate();
 
-  function Postaxios() {
-    axios
-      .post("https://api-ri7.herokuapp.com/api/users/register", userDatas)
-      .then((resp) => console.log("response", resp))
-      .catch((error) => console.log("error !", error.response.data));
+  // function Postaxios() {
+  //   axios
+  //     .post("https://api-ri7.herokuapp.com/api/users/register", userDatas)
+  //     .then((resp) => console.log("response", resp))
+  //     .catch((error) => console.log("error !", error.response.data));
+  // }
+
+  function Setstorage() {
+    localStorage.setItem("userdatas", JSON.stringify(userDatas));
   }
 
   function Navigatetologin() {
@@ -39,7 +35,8 @@ export default function Newuserform() {
   }
 
   function handleSubmit() {
-    Postaxios();
+    // Postaxios();
+    Setstorage();
     Navigatetologin();
   }
 

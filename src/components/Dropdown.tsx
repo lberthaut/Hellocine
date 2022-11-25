@@ -1,6 +1,7 @@
 import "../styles/dropdown.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Fetchmovie from "../services/Fetchmovie";
+import { Icontext, MyContext } from "../app/store/Appcontext";
 
 export interface Igenres {
   genres: Igenre[];
@@ -14,6 +15,11 @@ interface Igenre {
 export default function Dropdown() {
   const [genres, setGenres] = useState<Igenres | null>(null);
   const listURL = "/genre/movie/list";
+  const { searchValue, setSearchValue } = useContext(MyContext) as Icontext;
+
+  function Handlereset() {
+    setSearchValue("");
+  }
 
   return (
     <>
@@ -28,12 +34,13 @@ export default function Dropdown() {
           Genres
         </button>
         <ul className="dropdown-menu dropdown_ul">
-          {genres?.genres.map((genre) => (
-            <li className="dropdown_li">
+          {genres?.genres.map((genre, index) => (
+            <li className="dropdown_li" key={index}>
               <a
                 className="dropdown-item dropdown_link"
                 href={`/genre/${genre.name}-${genre.id}`}
                 data-id={genre.id}
+                onClick={Handlereset}
               >
                 {genre.name}
               </a>

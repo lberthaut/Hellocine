@@ -5,7 +5,7 @@ import { Imovie } from "../components/Home";
 import { Idatas } from "../components/Home";
 import { Ivideos } from "../components/Moviedetails";
 
-interface Isetdataprops {
+export interface Isetdataprops {
   setDatas:
     | ((data: []) => void)
     | ((data: Idatas | null) => void)
@@ -13,6 +13,7 @@ interface Isetdataprops {
     | ((data: Ivideos | null) => void)
     | ((data: Igenres | null) => void);
   URI: string;
+  query?: string;
 }
 
 export default function Fetchmovie(props: Isetdataprops) {

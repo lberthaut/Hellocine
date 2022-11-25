@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { MyContext } from "../app/store/Appcontext";
-import { Icontext } from "../app/store/Appcontext";
 import "../styles/login.css";
+import { Inewuser } from "../app/store/Appcontext";
 
 interface Ilogin {
   email: string;
@@ -13,27 +11,37 @@ interface Ilogin {
 
 export default function Loginform() {
   const navigate = useNavigate();
-  const { store } = useContext(MyContext) as Icontext;
   const [userDatas, setUserDatas] = useState<Ilogin>({
     email: "",
     password: "",
   });
 
-  function Postaxios() {
-    axios
-      .post("https://api-ri7.herokuapp.com/api/users/login", userDatas)
-      .then((resp) => {
-        sessionStorage.setItem("token", resp?.data.token);
-        navigate("/mypage");
-        store!.theme = "light";
-        console.log(store);
-      })
-      .catch((error) => console.log("error !", error.response.data));
+  // function Postaxios() {
+  //   axios
+  //     .post("https://api-ri7.herokuapp.com/api/users/login", userDatas)
+  //     .then((resp) => {
+  //       sessionStorage.setItem("token", resp?.data.token);
+  //       navigate("/mypage");
+  //     })
+  //     .catch((error) => console.log("error !", error.response.data));
+  // }
+
+  function Authverification() {
+    const parsedlocaluserdatas = JSON.parse(localStorage.getItem("userdatas")!);
+    if (
+      userDatas.email == parsedlocaluserdatas.email &&
+      userDatas.password == parsedlocaluserdatas.password
+    ) {
+      navigate("/mypage");
+    } else {
+      alert("Mauvais email ou mot de passe !");
+    }
   }
 
   function Handlesubmit(e: React.FormEvent) {
     e.preventDefault();
-    Postaxios();
+    Authverification();
+    // Postaxios();
   }
 
   return (

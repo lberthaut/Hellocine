@@ -2,6 +2,9 @@ import Topratedmovies from "./categories/Topratedmovies";
 import Trendingmovies from "./categories/Trendingsmovies";
 import "../styles/list.css";
 import Head from "./Head";
+import { useContext } from "react";
+import { Icontext, MyContext } from "../app/store/Appcontext";
+import Searchedmovies from "./categories/searchedmovies";
 
 export interface Imovie {
   title: string;
@@ -20,11 +23,18 @@ export interface Idatas {
 }
 
 export default function Home() {
+  const { searchValue } = useContext(MyContext) as Icontext;
   return (
     <>
-      <Head />
-      <Trendingmovies />
-      <Topratedmovies />
+      {searchValue.length > 2 ? (
+        <Searchedmovies />
+      ) : (
+        <>
+          <Head />
+          <Trendingmovies />
+          <Topratedmovies />
+        </>
+      )}
     </>
   );
 }

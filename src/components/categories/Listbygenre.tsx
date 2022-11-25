@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import List from "../List";
 import { Idatas } from "../Home";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../app/App";
+import { Icontext, MyContext } from "../../app/store/Appcontext";
+import Searchedmovies from "./searchedmovies";
 
 export default function Listbygenre() {
   const [datas, setDatas] = useState<Idatas | null>(null);
   const params = useParams();
   const idURL = `${params.id}`;
   const nameURL = `${params.name}`;
+  const { searchValue } = useContext(MyContext) as Icontext;
 
   useEffect(() => {
     fetch(
@@ -22,7 +25,13 @@ export default function Listbygenre() {
 
   return (
     <>
-      <List datas={datas} titlecontainer={nameURL} />
+      {searchValue.length > 2 ? (
+        <Searchedmovies />
+      ) : (
+        <>
+          <List datas={datas} titlecontainer={nameURL} />
+        </>
+      )}
     </>
   );
 }
