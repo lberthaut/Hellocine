@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 export default function Activeusers() {
   const [publicUser, setPublicUser] = useState(
-    Math.floor(Math.random() * 7420658)
+    Math.floor(Math.random() * 9420658)
   );
-  const range = 6000;
+  const range = 9000;
 
   function Increasepublic() {
     setInterval(() => {

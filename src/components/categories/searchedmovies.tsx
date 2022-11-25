@@ -7,7 +7,7 @@ import { API_KEY } from "../../app/App";
 export default function Searchedmovies() {
   const { searchValue } = useContext(MyContext) as Icontext;
   const [datas, setDatas] = useState<Idatas | null>(null);
-  const searchedTitle = `Recherche de : ${searchValue}`;
+  const searchedTitle = `Recherche de films`;
 
   useEffect(() => {
     if (searchValue.length > 0) {

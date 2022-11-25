@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
+import { Icontext, MyContext } from "../store/Appcontext";
+import Searchedmovies from "./categories/searchedmovies";
 
 interface Ilogin {
   email: string;
@@ -14,7 +16,7 @@ export default function Loginform() {
     email: "",
     password: "",
   });
-
+  const { searchValue } = useContext(MyContext) as Icontext;
   // function Postaxios() {
   //   axios
   //     .post("https://api-ri7.herokuapp.com/api/users/login", userDatas)
@@ -43,7 +45,9 @@ export default function Loginform() {
     // Postaxios();
   }
 
-  return (
+  return searchValue.length > 2 ? (
+    <Searchedmovies />
+  ) : (
     <>
       <img
         alt="wallpaper"
