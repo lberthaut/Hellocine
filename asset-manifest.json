@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Hellocine/static/css/main.fe6ceddc.css",
-    "main.js": "/Hellocine/static/js/main.5aeb1b7a.js",
+    "main.js": "/Hellocine/static/js/main.ca9f2aeb.js",
     "static/js/787.1fee1fb8.chunk.js": "/Hellocine/static/js/787.1fee1fb8.chunk.js",
     "index.html": "/Hellocine/index.html",
     "main.fe6ceddc.css.map": "/Hellocine/static/css/main.fe6ceddc.css.map",
-    "main.5aeb1b7a.js.map": "/Hellocine/static/js/main.5aeb1b7a.js.map",
+    "main.ca9f2aeb.js.map": "/Hellocine/static/js/main.ca9f2aeb.js.map",
     "787.1fee1fb8.chunk.js.map": "/Hellocine/static/js/787.1fee1fb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe6ceddc.css",
-    "static/js/main.5aeb1b7a.js"
+    "static/js/main.ca9f2aeb.js"
   ]
 }
