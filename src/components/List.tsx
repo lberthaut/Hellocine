@@ -3,7 +3,7 @@ import { Imovie } from "../components/Home";
 import { Idatas } from "../components/Home";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 
 interface Idataprops {
   titlecontainer: string;

@@ -3,7 +3,7 @@ import Trendingmovies from "./categories/Trendingsmovies";
 import "../styles/list.css";
 import Head from "./Head";
 import { useContext } from "react";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 import Searchedmovies from "./categories/searchedmovies";
 
 export interface Imovie {

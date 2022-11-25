@@ -1,6 +1,6 @@
 import { ReactEventHandler, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 import "../styles/searchbar.css";
 import { Idatas } from "./Home";
 

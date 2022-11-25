@@ -12,9 +12,9 @@ import Newuserform from "../Newuserform";
 import Mypage from "../Mypage";
 import Updateprofile from "../Updateprofile";
 import Addmovie from "../Addmovie";
-import Usetoken from "../../app/Utils/Usetoken";
+import Usetoken from "../../Utils/Usetoken";
 import Loginform from "../Loginform";
-import Appcontext from "../../app/store/Appcontext";
+import Appcontext from "../../store/Appcontext";
 import Listbygenre from "../categories/Listbygenre";
 import Searchedmovies from "../categories/searchedmovies";
 

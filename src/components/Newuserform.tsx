@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/newuser.css";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 
 export interface Inewuser {
   email: string;

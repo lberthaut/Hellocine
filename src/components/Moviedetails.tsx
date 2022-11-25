@@ -5,7 +5,7 @@ import { Imovie } from "./Home";
 import "../styles/moviedetails.css";
 import Videos from "./Videoscontainer";
 import Starrating from "./Starrating";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 import Searchedmovies from "./categories/searchedmovies";
 
 export interface Ivideos {

@@ -1,7 +1,7 @@
 import "../styles/dropdown.css";
 import { useContext, useEffect, useState } from "react";
 import Fetchmovie from "../services/Fetchmovie";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 
 export interface Igenres {
   genres: Igenre[];

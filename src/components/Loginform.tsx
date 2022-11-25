@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
-import { Inewuser } from "../app/store/Appcontext";
 
 interface Ilogin {
   email: string;

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Icontext, MyContext } from "../../app/store/Appcontext";
+import { Icontext, MyContext } from "../../store/Appcontext";
 import List from "../List";
 import { Idatas } from "../Home";
 import { API_KEY } from "../../app/App";

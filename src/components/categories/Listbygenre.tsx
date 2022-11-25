@@ -3,7 +3,7 @@ import List from "../List";
 import { Idatas } from "../Home";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../app/App";
-import { Icontext, MyContext } from "../../app/store/Appcontext";
+import { Icontext, MyContext } from "../../store/Appcontext";
 import Searchedmovies from "./searchedmovies";
 
 export default function Listbygenre() {

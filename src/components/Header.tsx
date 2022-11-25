@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import "../styles/header.css";
 import Dropdown from "./Dropdown";
 import Searchbar from "./Searchbar";
-import { Icontext, MyContext } from "../app/store/Appcontext";
+import { Icontext, MyContext } from "../store/Appcontext";
 
 export default function Header() {
   const logo = "./assets/logo.png";
